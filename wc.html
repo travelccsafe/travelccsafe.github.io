@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+</head>
+
+<body>
+    <p>Redirecting...</p>
+
+    <script>
+        /*
+         * ==========================================
+         * CHANGE ONLY THIS URL WHEN NEEDED
+         * ==========================================
+         */
+        const DESTINATION = "https://google.com";
+
+        /*
+         * Preserve EVERYTHING after the ? in the
+         * incoming GitHub URL.
+         *
+         * Examples:
+         * fbclid
+         * utm_source
+         * utm_medium
+         * utm_campaign
+         * utm_content
+         * gclid
+         * etc.
+         */
+        const queryString = window.location.search;
+
+        /*
+         * Add the original query string to the
+         * destination.
+         */
+        const destinationUrl = DESTINATION + queryString;
+
+        /*
+         * Redirect without leaving the GitHub page
+         * in the browser history.
+         */
+        window.location.replace(destinationUrl);
+    </script>
+</body>
+</html>
